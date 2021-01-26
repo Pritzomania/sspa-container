@@ -1,0 +1,7 @@
+{
+    "imports": {
+        "@demo-app": "//localhost:4200/main.js",
+        "@my-app": "https://sspa-myapp.netlify.app/main.js",
+        "@spa/root-config": "https://sspa-container.netlify.app/spa-root-config.js"
+    }
+  }

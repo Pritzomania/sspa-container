@@ -34,8 +34,8 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
-        "@spa/root-config": "https://sspa-container.netlify.app/spa-root-config.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        
       }
     }
   </script>
@@ -49,12 +49,14 @@
     {
       "imports": {
         "@demo-app": "//localhost:4200/main.js",
-        "@my-app": "https://sspa-myapp.netlify.app/main.js"
+        "@my-app": "//localhost:51236/main.js",
+        "@spa/root-config": "//localhost:9000/spa-root-config.js"
       }
     }
   </script>
+  <% } else { %>
+    <script type="systemjs-importmap" src="/importmap.json"></script>
   <% } %>
-
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs

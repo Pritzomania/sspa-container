@@ -34,7 +34,8 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "@spa/root-config": "https://sspa-container.netlify.app/spa-root-config.js"
       }
     }
   </script>
@@ -48,8 +49,7 @@
     {
       "imports": {
         "@demo-app": "//localhost:4200/main.js",
-        "@my-app": "//localhost:51236/main.js",
-        "@spa/root-config": "https://vigorous-goodall-9c3289.netlify.app/spa-root-config.js"
+        "@my-app": "https://sspa-myapp.netlify.app/main.js"
       }
     }
   </script>
@@ -80,7 +80,6 @@
         <route default>
           <application name="@demo-app"></application>
           <hr>
-          <span>Pritzo's den</span>
           <application name="@my-app"></application>
         </route>
       </main>
